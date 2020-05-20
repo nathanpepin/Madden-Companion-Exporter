@@ -13,8 +13,7 @@ const app = express();
 //   databaseURL: "https://<DATABASE_NAME>.firebaseio.com/"
 // });
 
-const serviceAccount = require("./firebase-adminsdk-ulhkb@tcp-madden.iam.gserviceaccount.com
-.json");
+const serviceAccount = require("https://raw.githubusercontent.com/nathanpepin/Madden-Companion-Exporter/master/tcp-madden-firebase-adminsdk-ulhkb-5fe865d55d.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
