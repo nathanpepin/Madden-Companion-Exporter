@@ -13,6 +13,13 @@ const app = express();
 //   databaseURL: "https://<DATABASE_NAME>.firebaseio.com/"
 // });
 
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://tcp-madden.firebaseio.com"
+});
+
 app.set('port', (process.env.PORT || 3001));
 
 app.get('*', (req, res) => {
